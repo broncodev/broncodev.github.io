@@ -6,59 +6,89 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <nav>
+        <!-- Requirement-1.K -->
+       <ul>
+            <li><a class="active" href="index.html">Rulebook</a></li>
+            <li><a href="https://www.bronco.dev/pinko">Home</a></li>
+       </ul>
+   </nav>
    <div class="bgimage"></div>
    <div class="top">
         <!-- Requirement-1.F -->
-        <h1 id="title">Pinko Rules</h1>
+        <h1 class="title">PINKO</h1>
         <!-- Requirement-1.B -->
-        <p>Let's see...</p>
+        <p class="title">Rulebook</p>
         <!-- Requirement-1.G -->
-        <p>
-            <!-- Requirement-1.H -->
-            This is the site where I talk about myself <span style="color:red;font-weight:bold">narcissistically</span>!
-        </p>
-        <p>
-            We can start with the board game I invented.
-        </p>
     </div>
 
     <section>
-        <h2>Pinko: A Communist Board Game</h2>
-        <!-- Requirement-1.L -->
-        <img src="pinko.png" alt="board game">
-          <!-- Requirement-1.P -->
-        <details>
-            <!-- Requirement-1.Q -->
-            <summary>In Pinko, you get to change the rules of the society to benefit you and your allies.</summary>
-            <p>This is based on the history of the Soviet Union, where corruption and propoganda overpowered any honest worker.
-                It isn't quite ready for mass production yet, but it is quite fun to play (if I say so myself).</p>
-        </details>
+        <h2>The Goal</h2>
+        <p>Pinko is about power. A player wins by currently owning 7 Assets or 120 Credits. Alternatively, a player may win by being the last not eliminated.
+        </p>
+        <h2>Getting Started</h2>
+        <p>Each player chooses a Player Marker and places it at the START space. Each player receives</p>
+            <ul>
+                <li>10 Asset Markers (person-shaped beads)</li>
+                <li>15 Credits</li>
+                <li>1 Rule Card</li>
+            </ul><p>Players roll to determine who goes first and who collects the first Rule Card. Turns will go clockwise after the first player.
+        </p>
     </section>
 
-    <div class="top">
-        <p>That was cool.</p>
-        <p>
-            But isn't a programmer supposed to make games digitally?
-        </p>
-        <p>
-            Yes! Here's one now.
-        </p>
-    </div>
-
-    <!-- Requirement-1.E -->
     <section>
-        <h2>Arcados: Zombies In Your Browser</h2>
-        <a href="arcados.html"><img src="game-design.png" alt="Artwork"></a>
-        <details>
-        <summary>Arcados plays similarly to the Zombies mode in Call of Duty.</summary>
-        <p>From a technical standpoint, the game itself is stored within a single html file (and hosted by this site, itch.io).
-            Back when I worked on it, I found it very interesting to see how far I could push the level of polish with the given constraints. 
-            I believe it includes over 4,000 lines of JavaScript. You can play it with this link. 
-            <!-- Requirement-1.I -->
-            <a href="https://broncojimmy.itch.io/arcados">ARCADOS by Landon</a></p>
-        </details>
+        <h2>Each Turn</h2>
+        <p>Before they roll, the player may use any number of their Rule cards (see Rule Cards).<br><br>
+
+            The player must roll the die and move to end their turn. 
+            The player moves their pawn the number of spaces corresponding to the dice. 
+            If they drop one die on the floor this die's value is void.  
+            If passing Start, the player collects Rule Cards.<br><br>
+            
+            If both die show the same number upon rolling (doubles) the current player draws an Event card.
+        </p>
+    </section>
+
+    <section>
+        <h2>Assets</h2>
+        <p>Assets are spaces on the board that can be acquired by players. 
+            Land on an unowned Asset to collect its Return Fee in Credits. 
+            Land on an owned Asset and you must pay the owning player the Return Fee. 
+            The Return Fee will often be modified by Rule cards throughout the game.<br><br>
+
+            If multiple players arrive at the same time, an auction can be started between them to acquire the Asset. 
+            Auction price starts at 1 Credit and goes up.<br><br>
+            
+            Each 3 Assets held increases Rule Card gain by 1. This does not apply to Rule Card effects or Events.
+        </p>
+    </section>
+
+    <section>
+        <h2>Each Turn</h2>
+        <p>Before they roll, the player may use any number of their Rule cards (see Rule Cards).<br><br>
+
+            The player must roll the die and move to end their turn. 
+            The player moves their pawn the number of spaces corresponding to the dice. 
+            If they drop one die on the floor this die's value is void.  
+            If passing Start, the player collects Rule Cards.<br><br>
+            
+            If both die show the same number upon rolling (doubles) the current player draws an Event card.
+        </p>
+    </section>
+
+    <section>
+        <h2>Each Turn</h2>
+        <p>Before they roll, the player may use any number of their Rule cards (see Rule Cards).<br><br>
+
+            The player must roll the die and move to end their turn. 
+            The player moves their pawn the number of spaces corresponding to the dice. 
+            If they drop one die on the floor this die's value is void.  
+            If passing Start, the player collects Rule Cards.<br><br>
+            
+            If both die show the same number upon rolling (doubles) the current player draws an Event card.
+        </p>
     </section>
 </body>
 
 <!-- Requirement-1.C -->
-<footer>This footer is here to say thanks for visiting my site!</footer>
+<footer>broncodev 2025</footer>
