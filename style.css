@@ -1,0 +1,212 @@
+body {
+  background-color: rgb(32, 32, 32);/* Requirement-2.4 */
+  color: rgb(255, 255, 255);/* Requirement-2.3 */
+}
+
+::-webkit-scrollbar {/* Requirement-2.E */
+  width: 0px;
+}
+
+
+.top{/* Requirement-2.C */
+  text-align: center;/* Requirement-2.2 */
+  z-index: 80;/* Requirement-2.9 */
+  float: none;
+}
+
+#mid{
+  margin:0%;
+  border-radius: 0px;
+  background-color: #00000000;
+}
+
+.topbkg{
+  margin: 0px;/* Requirement-2.6 */
+  padding: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  border-radius: 20px;/* Requirement-2.5 */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h2{
+  text-align: center;
+  margin: 0px;
+  padding: 20px;
+}
+
+body, html {/* Requirement-2.B */
+  height: 80%;/* Requirement-2.7 */
+}
+
+@keyframes mymove {
+  from {height: 0px;filter: blur(10px);background-size: 150%;}
+  to {height: 55%;filter: blur(0px); background-size: 100%;}
+}
+
+.bgimage {
+  background-image: url(pinko.png);
+  animation: mymove 4s cubic-bezier(0.19, 1, 0.22, 1);
+  animation-fill-mode: forwards;
+  filter: blur(0px);
+  -webkit-filter: blur(0px);
+  height: 0%;/* Requirement-2.10 */
+  background-position: top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  border-radius: 0px 0px 20px 20px;
+}
+
+section {
+  margin: 0px 2%;
+  padding: 0px;
+  border-radius: 20px;
+  background-color: #00000054;
+}
+
+footer{
+  margin: 20px 10px;
+  padding: 10px;
+  text-align: center;
+  float:none;
+}
+
+table{
+  margin: 20px;
+  padding: 20px;
+}
+
+td, th{
+  padding: 10px 30px;
+  text-align: left;
+}
+
+img {
+  border-radius: 20px;
+  margin: 0px 0px;
+  padding: 0px;
+  width: 50%;
+}
+
+a img:hover{
+  filter: brightness(1.2);
+}
+
+figcaption{
+  visibility: hidden;
+  position: fixed;
+}
+
+summary{/* Requirement-2.H */
+  background-color: #40404054;
+  border-radius: 20px;
+  padding: 20px 10px;
+  margin: 0px 0px; 
+}
+
+summary:hover{
+  background-color: #9393938c;
+}
+
+details{/* Requirement-2.G */
+  margin: 0px;
+  padding: 0px 10px;
+  float: left;
+  width: 50%;
+}
+
+a {
+  color:#c1f5ff;
+  padding: 0px;
+  margin: 0px;
+}
+
+iframe{
+  display: block;
+  width: 100%; 
+  border: none; 
+  overflow-y: auto; 
+  overflow-x: hidden;
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  border: none;
+}
+
+html{
+  font-family: 'Lexend', Arial, sans-serif;/* Requirement-2.1 */
+  scroll-behavior: smooth;
+  overflow: auto;
+}
+
+html,body,iframe {
+            margin: 0px;
+            padding: 0px;
+            height: 100%;
+            border: none;
+        }
+
+p{/* Requirement-2.A */
+  margin: 20px;
+}
+
+#title{/* Requirement-2.D */
+  position: absolute;/* Requirement-2.15 */
+  text-align: center;
+  clear: both;
+  top: 40px;
+  height: 50%;
+  width: 100%;
+  animation: mymove 4s cubic-bezier(0.19, 1, 0.22, 1);
+  animation-fill-mode: forwards;
+}
+
+h1 {
+  color: rgb(255, 255, 255);
+  font-size: 120px;
+}
+
+ul {
+  list-style-type: none;/* Requirement-2.8 */
+  margin: 0px;
+  visibility: visible;/* Requirement-2.16 */
+  padding: 0px;
+  overflow: hidden;/* Requirement-2.14 */
+  background: linear-gradient( 
+                to top, #00bfff00, #0000006b);
+  position: fixed;
+  width: 100%;
+  border-radius: 0px;
+  z-index: 100;/* Requirement-2.17 */
+}
+
+li {
+  float: right;/* Requirement-2.11 */
+  background-color: #000000;
+  border-radius: 20px;
+  margin: 10px;
+}
+
+li a {/* Requirement-2.F */
+  display: block;/* Requirement-2.12 */
+  clear: both;/* Requirement-2.13 */
+  color: white;
+  text-align: center;
+  padding: 10px 40px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {/* Requirement-2.F */
+  background-color: #4b4b4b;
+  border-radius: 20px;
+}
+
+.active {
+  background-color: #ffffff;
+  border-radius: 20px;
+  color: black;
+}
