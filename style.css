@@ -1,14 +1,13 @@
 body {
-  background-color: rgb(32, 32, 32);/* Requirement-2.4 */
+  background-color: rgb(0, 0, 0);/* Requirement-2.4 */
   color: rgb(255, 255, 255);/* Requirement-2.3 */
 }
 
 .wrapper {
-  height: 100vh;
   overflow-y: auto;
   overflow-x: hidden;
   perspective: 15px;
-  padding: 20px;
+  padding: 0px;
 }
 
 ::-webkit-scrollbar {/* Requirement-2.E */
@@ -34,20 +33,16 @@ body {
 }
 
 h2{
-  text-align: center;
+  text-align: left;
   margin: 0px;
   padding: 10px;
-}
-
-body, html {/* Requirement-2.B */
-  height: 80%;/* Requirement-2.7 */
 }
 
 @keyframes mymove {
   from {transform: translateZ(-10px) scale(3);}
   to {transform: translateZ(-10px) scale(2);}
 }
-
+/*
 .bgimage {
   background-image: url(pinko.png);
   mask-image: linear-gradient(180deg,rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
@@ -66,16 +61,25 @@ body, html {/* Requirement-2.B */
   position: absolute;
   z-index: -1;
   overflow: clip;
+}*/
+
+.bgimage{
+  background-image: url(pinko.png);
+  min-height: 100vh;
+  position:fixed;
+  background-position:top;
+  display: none;
 }
 
 @media screen and (max-width: 1000px){ 
   .bgimage{
-    transform: translateZ(-10px) scale(2);
-    height: 200%;
   } 
   section h2{
     text-align: left;
     margin: 10px;
+  }
+  *{
+    text-align: left !important;
   }
 }
 
@@ -86,7 +90,7 @@ section {
   padding: 20px;
   max-width: 1000px;
   border-radius: 20px;
-  background-color: #00000000;
+  background-color: #000000;
 }
 
 footer{
@@ -105,14 +109,6 @@ table{
 td, th{
   padding: 10px 30px;
   text-align: left;
-}
-
-
-img {
-  border-radius: 20px;
-  margin: 0px 0px;
-  padding: 0px;
-  width: 50%;
 }
 
 a img:hover{
@@ -238,7 +234,7 @@ li a:hover:not(.active) {/* Requirement-2.F */
 }
 
 .blue{
-  background-color:#003f8d;
+  background-color:#0056be;
 }
 
 /* On mobile */
@@ -254,13 +250,15 @@ li a:hover:not(.active) {/* Requirement-2.F */
   }
 
   p.title{
-    font-size: 50px;
-    padding: 0px;
+    font-size: 40px;
+    font-style: italic;
   }
 
   h1.title{
-    font-size: 200px;
-    
+    font-size: 600%;
+  }
+  .title{
+    padding: 20px;
   }
 
   nav ul{
