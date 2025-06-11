@@ -199,8 +199,7 @@ nav ul {
   padding: 0px;
   position: fixed;
   overflow: hidden;/* Requirement-2.14 */
-  background: linear-gradient( 
-                to top, #00bfff00, #0000006b);
+  background: rgba(0, 0, 0, 0);
   width: 100%;
   border-radius: 0px;
   z-index: 100;/* Requirement-2.17 */
