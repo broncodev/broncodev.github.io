@@ -6,7 +6,7 @@
   "start_url": "/broncodev.github.io/",
   "background_color": "#ffffff",
   "theme_color": "#ffffff",
-  "display": "fullscreen", 
+  "display": "standalone", 
   "icons": [
       {
         "src": "/broncodev.github.io/img/icon.png",
