@@ -90,7 +90,8 @@ section {
   padding: 20px;
   max-width: 1000px;
   border-radius: 20px;
-  background-color: #000000;
+  background-color: #121212;
+  border: solid 2px rgba(255, 255, 255, 0.25);
 }
 
 footer{
