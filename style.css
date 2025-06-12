@@ -102,6 +102,11 @@ footer{
   background-color: #ffffff00;
 }
 
+::selection {
+  color: rgb(0, 0, 0);
+  background: rgb(255, 255, 255);
+}
+
 table{
   margin: 20px;
   padding: 20px;
@@ -243,6 +248,7 @@ li a:hover:not(.active) {/* Requirement-2.F */
   section{
     border-radius: 40px;
     padding: 40px;
+    margin: 10px;
   }
 
   div{

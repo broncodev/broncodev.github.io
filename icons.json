@@ -1,12 +1,4 @@
 {
-  "name": "Pinko",
-  "short_name": "Pinko",
-  "description": "All things Pinko- Multiplayer, Shop, and Rules.",
-  "scope": "/broncodev.github.io/",
-  "start_url": "/broncodev.github.io/",
-  "background_color": "#ffffff",
-  "theme_color": "#ffffff",
-  "display": "standalone", 
   "icons": [
     {
       "src": "windows11/SmallTile.scale-100.png",
