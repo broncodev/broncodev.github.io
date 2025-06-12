@@ -1,13 +1,10 @@
 var GHPATH = '/broncodev.github.io';
 var APP_PREFIX = 'pinko_';
-var VERSION = 'version_004';
+var VERSION = 'version_005';
 var URLS = [    
   `${GHPATH}/`,
-  `${GHPATH}/index.html`,
   `${GHPATH}/style.css`,
   `${GHPATH}/img/icon.png`,
-  `${GHPATH}/pinko.html`,
-  `${GHPATH}/rules.html`
 ]
 
 var CACHE_NAME = APP_PREFIX + VERSION
