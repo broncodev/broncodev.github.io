@@ -1,5 +1,6 @@
 body {
-  background: linear-gradient(191deg,rgba(0, 105, 217, 1) 0%, rgba(199, 87, 186, 1) 50%, rgba(237, 221, 83, 1) 100%);
+  /*background: linear-gradient(191deg,rgba(0, 105, 217, 1) 0%, rgba(199, 87, 186, 1) 50%, rgba(237, 221, 83, 1) 100%);*/
+  background: #2a2a2a;
 
   background-attachment: fixed;
   color: rgb(255, 255, 255);/* Requirement-2.3 */
