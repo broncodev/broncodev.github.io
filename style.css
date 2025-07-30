@@ -93,7 +93,6 @@ section {
   border-radius: 20px;
   background-color: #12121261;
   border: solid 2px rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(10px);
 }
 
 footer{
