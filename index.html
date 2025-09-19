@@ -1,29 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pinko</title>
-  <link rel="canonical" href="https://broncodev.github.io/broncodev.github.io/" />
-  <link rel="manifest" href="/broncodev.github.io/manifest.webmanifest">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <iframe id="game" src="pinko.html" title="Pinko"></iframe>
+  <head>
+    <title>broncodev</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="256.png">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css?family=Lexend"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a class="glass-card" id="active" href="index.html">Home</a></li>
+        <li><a class="glass-card" href="rules.html">Rulebook</a></li>
+        <li><a class="glass-card" href="privacy-policy.html">Privacy Policy</a></li>
+      </ul>
+    </nav>
+    <div class="wrapper">
+      <div class="bgimage"></div>
+      <div class="top">
+        <h2 class="title">Pinko</h2>
+        <h2 class="glow">The best f***ing board game.</h2>
+      </div>
 
-  <script>
-      if (navigator.serviceWorker) {
-        navigator.serviceWorker.register (
-          '/broncodev.github.io/sw.js',
-          {scope: '/broncodev.github.io/'}
-        )
-      }
+      <section class="centered"></section>
 
-      function fullscreen(){
-        const element = document.getElementById('game');
-        element.requestFullscreen();
-      }
-  </script>
-  <script src="js/app.js"></script>
-</body>
+      <section class="centered">
+        <p>
+          Pinko is about power. It's the only game where you <strong>truly dominate in one moment and are
+          destroyed in the next.</strong> 
+        </p>
+        <p>
+          Create the Rules. Rewrite history.
+        </p>
+        <ul>
+          <li><a class="glass-card" href="rules.html">Rulebook</a></li>
+          <li><a class="glass-card" href="rules.html">Learn More</a></li>
+        </ul>
+      </section>
+    </div>
+  </body>
 </html>

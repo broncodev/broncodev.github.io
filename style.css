@@ -50,13 +50,18 @@ nav ul {
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.0);
 }
 
+img{
+  width: 100%;
+}
 
 nav li {
-  margin: 0 10px;
+  margin: 0px 0px;
 }
 
 li{
   list-style-type: none;
+  margin: 5px 5px;
+  padding: 0px 5px;
 }
 
 li a {
@@ -65,7 +70,6 @@ li a {
   text-align: center;
   padding: 10px 30px;
   text-decoration: none;
-  border-radius: 20px;
   transition: background-color 0.3s ease;
 }
 
@@ -120,7 +124,7 @@ section {
   margin: 30px auto;
   padding: 30px 40px;
   max-width: 600px;
-  border-radius: 20px;
+  border-radius: 10px;
 
   /* Improved glass effect for readability and style */
   background: rgba(25, 25, 25, 0.5); /* More opaque */
@@ -138,7 +142,6 @@ section.blue {
 h2 {
   color: rgb(255, 255, 255);
   font-size: 2em;
-  text-align: left;
   margin-top: 0;
   margin-bottom: 20px; /* Space between heading and text */
   padding: 0;
@@ -149,8 +152,22 @@ p, li {
   margin: 1em 0;
 }
 
+
 ul {
-  padding-left: 25px;
+  padding: 10px 0;
+  padding-left: 0px;
+  list-style-type: none;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.glow{
+  text-shadow: #ffffff8e 0px 0px 10px, #FFF 0px 0px 15px, #00bfdcc9 0px 0px 20px, #2da0ff 0px 0px 12px, #2d8fff 0px 0px 40px, #2d5aff 0px 0px 140px, #2d73ff 0px 0px 200px;
+  font-size: 2.5em;
+  font-weight: 400;
 }
 
 
@@ -164,7 +181,7 @@ details {
 
 summary {
   background-color: rgba(64, 64, 64, 0.3);
-  border-radius: 15px;
+  border-radius: 10px;
   padding: 15px;
   margin: 0;
   cursor: pointer;
@@ -182,25 +199,30 @@ footer {
 }
 
 .glass-card {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
   color: white;
   text-align: center;
   padding: 10px 30px;
   text-decoration: none;
-  border-radius: 20px;
+  border-radius: 10px;
   font-size: medium;
   border: 1px;
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
   box-shadow: 
     0 8px 32px rgba(0, 0, 0, 0.1),
-    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3),
     inset 0 -1px 0 rgba(255, 255, 255, 0.1),
-    inset 0 0 6px 3px rgba(255, 255, 255, 0.3);
+    inset 0 0 6px 3px rgba(255, 255, 255, 0.1);
   overflow: hidden;
 }
 
-
+section.centered{
+  text-align: center !important;
+  align-items: center;
+  border: 0px;
+  background-color: #00000000;
+}
 
 /* --- Mobile Responsiveness --- */
 @media screen and (max-width: 1000px) {
@@ -222,7 +244,7 @@ footer {
     left: 0;
     flex-direction: row; /* Arrange items side-by-side */
     justify-content: space-evenly; /* Distribute items evenly */
-    padding: 10px 0;
+    padding: 0px 0px;
     border-top: 1px solid rgba(255, 255, 255, 0.1); /* Move border to top */
     border-bottom: none; /* Remove bottom border */
   }
@@ -233,7 +255,7 @@ footer {
   }
 
   li a {
-    padding: 10px 20px; /* Adjust padding for a more compact button */
+    padding: 0px 20px; /* Adjust padding for a more compact button */
   }
 
   /* --- Other mobile styles remain the same --- */
