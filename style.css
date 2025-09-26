@@ -207,6 +207,9 @@ footer {
   padding: 10px 30px;
   text-decoration: none;
   border-radius: 100px;
+  white-space: nowrap;
+  overflow: hidden; /* Hides the overflowing content */
+  text-overflow: ellipsis; /* Displays an ellipsis (...) for truncated text */
   font-size: medium;
   border: 1px;
   backdrop-filter: blur(5px);
@@ -246,18 +249,18 @@ section.centered{
     left: 0;
     flex-direction: row; /* Arrange items side-by-side */
     justify-content: space-evenly; /* Distribute items evenly */
-    padding: 0px 0px;
+    padding: 10px 0px;
     border-top: 1px solid rgba(255, 255, 255, 0.1); /* Move border to top */
     border-bottom: none; /* Remove bottom border */
   }
 
   nav li {
     width: auto; /* Let the buttons size themselves */
-    margin: 0 5px;
+    margin: 0 0px;
   }
 
   li a {
-    padding: 0px 20px; /* Adjust padding for a more compact button */
+    padding: 0px 0px; /* Adjust padding for a more compact button */
   }
 
   /* --- Other mobile styles remain the same --- */

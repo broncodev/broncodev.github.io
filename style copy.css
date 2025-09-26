@@ -1,0 +1,205 @@
+/* --- Global Styles & Background --- */
+body {
+  background: #000000;
+  background-size: cover;
+  background-attachment: fixed;
+  color: rgb(183, 183, 183);
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: 'Be Vietnam Pro', Arial, sans-serif;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  scrollbar-width: none; /* For Firefox */
+}
+
+/* Hides scrollbar for Chrome, Safari and Opera */
+html::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  color: rgb(0, 0, 0);
+  background: rgb(255, 255, 255);
+}
+
+/* --- Navigation Bar --- */
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.9);
+}
+
+nav li {
+  margin: 0;
+  padding: 0;
+}
+
+li a.glass-card {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 10px 30px;
+  text-decoration: none;
+  border-radius: 100px;
+  font-size: medium;
+  border: 1px solid transparent; /* Set transparent border to prevent size shift on hover */
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.1),
+    inset 0 0 6px 3px rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+  transition: background-color 0.3s ease;
+}
+
+li a.glass-card:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+#active {
+  background-color: #ffffff;
+  color: black;
+  font-weight: 500;
+}
+
+/* The active button should not change on hover */
+#active:hover {
+  background-color: #ffffff;
+}
+
+/* --- Main Content Wrapper --- */
+.wrapper {
+  overflow-x: hidden;
+  perspective: 15px;
+  padding-top: 80px; /* Pushes content down below the fixed nav */
+}
+
+/* --- Title Section --- */
+.top {
+  text-align: center;
+  padding: 40px 20px 20px 20px;
+}
+
+strong {
+  color: rgb(238, 238, 238);
+}
+
+h1.title {
+  color: rgb(255, 255, 255);
+  font-size: clamp(4em, 12vw, 120px);
+  font-family: 'Lexend', Arial, sans-serif;
+  margin: 0;
+  line-height: 1.1;
+}
+
+p.title {
+  font-style: italic;
+  font-weight: 100;
+  margin-top: 10px;
+}
+
+/* --- Content Sections --- */
+section {
+  margin: 30px auto;
+  padding: 30px 40px;
+  max-width: 700px;
+  border-radius: 10px;
+  background: rgb(25,25,25,.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+}
+
+section.blue {
+  background-color: rgba(0, 112, 239, 0.25);
+}
+
+/* --- Typography Enhancements --- */
+h2 {
+  color: rgb(255, 255, 255);
+  font-size: 2em;
+  margin-top: 0;
+  margin-bottom: 20px;
+  padding: 0;
+}
+
+p {
+  line-height: 1.7;
+  margin: 1em 0;
+}
+
+/* FIX: Scoped ul/li styles to only affect content inside a <section> */
+section ul {
+  padding-left: 25px; /* Indent list */
+}
+
+section li {
+  list-style-type: disc; /* Restore bullets */
+  line-height: 1.7;
+  margin: 0.5em 0;
+}
+
+/* --- Mobile Responsiveness --- */
+@media screen and (max-width: 768px) {
+  /* Add padding to the bottom to prevent content from being hidden by the nav bar. */
+  body {
+    padding-bottom: 70px; 
+  }
+
+  .wrapper {
+    padding-top: 20px; /* Reduce top padding for mobile */
+  }
+
+  /* Position nav bar at the bottom */
+  nav ul {
+    bottom: 0;
+    top: auto; /* Unset the top position */
+    padding: 5px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: none;
+  }
+  
+  nav li {
+    flex: 1; /* Allow items to grow and fill space */
+    text-align: center;
+    margin: 0 2px;
+  }
+
+  /* FIX: Increased padding for usable tap targets on mobile */
+  li a.glass-card {
+    padding: 15px 10px;
+    font-size: 0.9em;
+  }
+
+  .top {
+    padding: 20px 20px 40px 20px;
+  }
+
+  section {
+    padding: 25px 20px;
+    margin: 15px;
+  }
+
+  h2 {
+    font-size: 1.8em;
+  }
+}
