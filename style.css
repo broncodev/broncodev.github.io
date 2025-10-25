@@ -44,9 +44,9 @@ nav ul {
   align-items: center;
 
   /* Glass effect for the nav bar */
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.9);
 }
@@ -108,16 +108,16 @@ li a {
 }
 
 #active {
-  background-color: #ffffff;
+  background-color: #ffffffcb;
   color: black;
 }
 
 li a:hover {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(131, 131, 131, 0.3);
 }
 
 #active:hover {
-  background-color: rgba(236, 236, 236, 0.6);
+  background-color: rgb(236, 236, 236);
 }
 
 /* --- Main Content Wrapper --- */
@@ -162,8 +162,6 @@ section {
 
   /* Improved glass effect for readability and style */
   background: rgb(25,25,25,.5); /* More opaque */
-  backdrop-filter: blur(0px);
-  -webkit-backdrop-filter: blur(0px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
 }
@@ -235,7 +233,7 @@ footer {
 }
 
 .glass-card {
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(42, 42, 42, 0.1);
   color: white;
   text-align: center;
   padding: 10px 30px;
