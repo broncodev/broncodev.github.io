@@ -2,8 +2,6 @@ require 'erb'
 require 'tilt'
 require 'tilt/erb'
 
-# Define variables or data accessible within the ERb template
-
 files = [
   "index",
   "privacy-policy",
