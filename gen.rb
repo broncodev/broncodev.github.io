@@ -21,9 +21,16 @@ def render_with_layout(page_template, layout_template)
   end
 end
 
+directory_name = "docs"
+
+unless File.exist?(directory_name)
+  Dir.mkdir(directory_name)
+  puts "Directory '#{directory_name}' created."
+end
+
 for file in files[0..-1]
   output_html = render_with_layout("#{file}.erb", 'header.erb')
-  File.open("#{file}.html", "w") do |f|
+  File.open("docs/#{file}.html", "w") do |f|
     f.write(output_html)
   end
 end
