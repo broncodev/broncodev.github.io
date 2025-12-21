@@ -6,6 +6,7 @@ files = [
   "index",
   "privacy-policy",
   "rules",
+  "pinko",
 ]
 
 # Define a method to render the page content with a layout
