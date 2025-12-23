@@ -1,4 +1,9 @@
 /* --- Global Styles & Background --- */
+:root {
+  --border-color: #505050; /* Global scope variable */
+  --spacing: 20px;
+}
+
 body {
   background: #000000;
   background-size: cover;
@@ -47,7 +52,7 @@ nav ul {
   background: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid var(--border-color); ;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.9);
 }
 
@@ -56,40 +61,23 @@ footer p{
 }
 
 footer{
-  border-top: 1px rgb(35, 35, 35) solid;
+  border-top: 1px solid var(--border-color); ;
 }
 
 img{
   position: relative;
-  margin: -80px 0px -50px 0px;
   padding: 0px;
-  width: 800px;
-  object-fit: cover;
-  max-width: 100vw;
+  max-width: 50%;
   margin-left: auto;
   margin-right: auto;
   z-index: -1;
   display: block; /* Remove extra space below image */
-  -webkit-mask: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 1) 30%,
-    rgba(0, 0, 0, 1) 70%,
-    rgba(0, 0, 0, 0) 100%
-  );
-  mask: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 1) 40%,
-    rgba(0, 0, 0, 1) 60%,
-    rgba(0, 0, 0, 0) 100%
-  );
 }
 
 .cover{
   filter: brightness(1.2);
   width: 600px;
-  margin: -100px 0px -100px 0px;
+  margin: -120px 0px -120px 0px;
   margin-left: auto;
   margin-right: auto;
   display: block;
@@ -110,6 +98,9 @@ li a {
   display: block;
   color: white;
   text-align: center;
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
   padding: 10px 30px;
   text-decoration: none;
   transition: background-color 0.3s ease;
@@ -139,7 +130,7 @@ li a:hover {
 /* --- Title Section --- */
 .top {
   text-align: center;
-  padding: 40px 20px 20px 20px; /* Added more space below title */
+  padding: 10px; /* Added more space below title */
 }
 
 strong{
@@ -155,26 +146,87 @@ h1.title {
   text-shadow: 0 0 0px rgba(0, 0, 0, 0.5); /* Adds depth */
 }
 
+.grid-container {
+  display: flex; /* Makes the container a flex container */
+  flex-wrap: wrap; /* Allows items to wrap to the next line */
+  justify-content: center; /* Centers items horizontally along the main axis */
+  align-items: center; /* Centers items vertically along the cross axis */
+  padding: 0px 0px; /* Adds some padding around the grid */
+}
+
+.grid-item {
+  width: 30em; /* Fixed width for grid items */
+  height: 30em;
+  margin: 0px 10px 10px 10px; /* Space between grid items */
+  display: flex; /* Makes each item a flex container for its content */
+  justify-content: center; /* Centers content within each item horizontally */
+  align-items: center; /* Centers content within each item vertically */
+  border: 1px solid var(--border-color); 
+  position: relative;
+  overflow: hidden; /* ensures cropped parts are hidden */
+}
+
+.grid-item div{
+  display: block;
+  position: absolute;
+  transform: translateY(5em);
+  color: white;
+  text-align: center;
+  width: 100%;
+  margin-top: auto;
+  /*This is really bad.*/
+}
+
+.grid-item img {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the entire grid item */
+}
+
+.art-container{
+  display: flex; /* Makes the container a flex container */
+  flex-wrap: wrap; /* Allows items to wrap to the next line */
+  justify-content: center; /* Centers items horizontally along the main axis */
+  align-items: flex-start; /* Prevents items from stretching to the tallest item's height by default */
+}
+
+.art-item{
+  width: 25em; /* Fixed width for grid items */
+  display: flex; /* Makes each item a flex container for its content */
+  position: relative;
+  overflow: hidden; /* ensures cropped parts are hidden */
+  aspect-ratio: 17/22; 
+  
+}
+
+.art-item img {
+  width: 100%; /* Image takes the full width of its grid cell */
+  height: auto; /* Height is automatically calculated to maintain aspect ratio */
+  display: block; /* Removes any default inline margins/spacing */
+  max-width: 100%;
+  object-fit: cover;
+}
+
 p.title {
   font-style: italic;
   font-weight: 100;
   margin-top: 10px;
 }
 
+
+
 /* --- Content Sections --- */
 section {
   margin: 30px auto;
-  padding: 30px 40px;
+  padding: 30px;
   max-width: 700px;
   border-radius: 10px;
 
-  /* Improved glass effect for readability and style */
-  background: rgb(25,25,25,.5); /* More opaque */
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  /* Glass effect */
+  border: 1px solid var(--border-color); ;
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
 }
-
-
 
 section.blue {
   background-color: rgba(0, 112, 239, 0.25);
@@ -251,7 +303,7 @@ footer {
   overflow: hidden; /* Hides the overflowing content */
   text-overflow: ellipsis; /* Displays an ellipsis (...) for truncated text */
   font-size: medium;
-  border: 1px;
+  border: 1px solid var(--border-color);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
   box-shadow: 
@@ -282,16 +334,24 @@ section.centered{
     padding-top: 0;
   }
 
-  /* KEY FIX 2: Change nav bar to be fixed to the bottom */
+  img{
+  max-width: 100%;
+}
+
   nav ul {
     position: fixed;
     bottom: 0;
     left: 0;
     flex-direction: row; /* Arrange items side-by-side */
-    justify-content: space-evenly; /* Distribute items evenly */
+    justify-content: center; /* Distribute items evenly */
     padding: 10px 0px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Move border to top */
+    border-top: 1px solid var(--border-color); /* Move border to top */
     border-bottom: none; /* Remove bottom border */
+  }
+
+  .grid-item{
+    width: 100%;
+    height: 40vh;
   }
 
   nav li {
@@ -305,12 +365,12 @@ section.centered{
 
   /* --- Other mobile styles remain the same --- */
   .top {
-    padding: 20px 20px 40px 20px;
+    padding: 20px 20px 0px 20px;
   }
 
   section {
     padding: 25px 20px;
-    margin: 15px;
+    margin: 10px;
 
   }
 
