@@ -100,11 +100,16 @@ li a {
   color: white;
   text-align: center;
   max-width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 10px 30px;
   text-decoration: none;
   transition: background-color 0.3s ease;
+}
+
+a{
+  margin: 0px auto;
+}
+
+ul li{
+  list-style-type:none;
 }
 
 #active {
@@ -152,13 +157,14 @@ h1.title {
   flex-wrap: wrap; /* Allows items to wrap to the next line */
   justify-content: center; /* Centers items horizontally along the main axis */
   align-items: center; /* Centers items vertically along the cross axis */
-  padding: 0px 0px; /* Adds some padding around the grid */
+  padding: 0.5em; /* Adds some padding around the grid */
+  gap: 1em;
 }
 
 .grid-item {
   width: 30em; /* Fixed width for grid items */
   height: 30em;
-  margin: 0px 10px 10px 10px; /* Space between grid items */
+  gap: 50px;
   display: flex; /* Makes each item a flex container for its content */
   justify-content: center; /* Centers content within each item horizontally */
   align-items: center; /* Centers content within each item vertically */
@@ -215,7 +221,13 @@ p.title {
   margin-top: 10px;
 }
 
-
+.horizontal{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+  gap: 1em;
+}
 
 /* --- Content Sections --- */
 section {
@@ -309,9 +321,9 @@ footer {
   -webkit-backdrop-filter: blur(15px);
   box-shadow: 
     0 8px 32px rgba(0, 0, 0, 0.1),
-    inset 0 1px 0 rgba(255, 255, 255, 0.6),
-    inset 0 -1px 0 rgba(255, 255, 255, 0.1),
-    inset 0 0 6px 3px rgba(255, 255, 255, 0.3);
+    inset 0 1px 0 rgba(255, 255, 255, 0.3),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.05),
+    inset 0 0 6px 3px rgba(255, 255, 255, 0.15);
   overflow: hidden;
 }
 
@@ -320,6 +332,8 @@ section.centered{
   align-items: center;
   border: 0px;
   background-color: #00000000;
+  margin: 1em auto;
+  padding: 1px;
 }
 
 /* --- Mobile Responsiveness --- */
