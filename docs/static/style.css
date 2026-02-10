@@ -60,13 +60,21 @@ nav ul {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
 }
 
-footer p {
-  color: rgb(96, 96, 96);
-}
-
 footer {
   border-top: 1px solid var(--border-color);
-  ;
+  font-size: .7em;
+  color: var(--border-color) !important;
+  text-align: left;
+  padding: 20px;
+
+  p {
+    margin: 0;
+    margin-bottom: 0px;
+  }
+
+  a {
+    color: var(--border-color) !important;
+  }
 }
 
 img {
@@ -135,8 +143,11 @@ li a:hover {
   overflow-x: hidden;
   perspective: 15px;
   /* KEY FIX: Pushes content down to avoid being covered by fixed nav */
-  padding-top: 80px;
+  padding-top: 70px;
+  padding-bottom: 0px;
 }
+
+
 
 /* --- Title Section --- */
 .top {
@@ -165,7 +176,7 @@ h1.title {
   grid-template-columns: 1fr 1fr;
   padding: 0.5em;
   /* Adds some padding around the grid */
-  gap: 1em;
+  gap: 10px;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -258,7 +269,7 @@ p.title {
 
 /* --- Content Sections --- */
 section {
-  margin: 30px auto;
+  margin: 10px auto;
   padding: 30px;
   max-width: 700px;
   border-radius: 10px;
@@ -267,6 +278,22 @@ section {
   border: 1px solid var(--border-color);
   ;
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+}
+
+section ul:not(.horizontal) {
+  list-style-type: disc !important;
+  display: block !important;
+  padding-left: 40px !important;
+  margin: 1em 0;
+  justify-content: unset;
+  align-items: unset;
+}
+
+section li:not(.horizontal) {
+  list-style-type: disc !important;
+  display: list-item !important;
+  margin: 0.5em 0;
+  padding: 0;
 }
 
 section.blue {
@@ -330,12 +357,6 @@ summary:hover {
   background-color: rgba(147, 147, 147, 0.4);
 }
 
-footer {
-  text-align: center;
-  padding: 20px;
-  color: rgba(255, 255, 255, 0.7);
-}
-
 .glass-card {
   background: rgba(42, 42, 42, 0.1);
   color: white;
@@ -379,7 +400,8 @@ section.centered {
 
   .wrapper {
     /* Remove top padding since mobile nav is no longer at the top */
-    padding-top: 0;
+    padding: 0;
+    margin: 0;
   }
 
   img {
@@ -404,6 +426,7 @@ section.centered {
 
   .grid-container {
     grid-template-columns: 1fr;
+    padding: 10px;
   }
 
   .grid-item {
