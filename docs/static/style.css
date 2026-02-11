@@ -477,6 +477,14 @@ section.centered {
     padding: 20px 20px 0px 20px;
   }
 
+  /* Fix for mobile sticky hover: animate once then return */
+  a.grid-item:hover {
+    transform: none;
+    border-color: var(--border-color);
+    animation: mobile-lift 0.6s ease;
+  }
+
+
   section {
     padding: 25px 20px;
     margin: 10px;
@@ -492,5 +500,22 @@ section.centered {
     float: none;
     padding: 0;
     margin-bottom: 15px;
+  }
+}
+
+@keyframes mobile-lift {
+  0% {
+    transform: translateY(0);
+    border-color: var(--border-color);
+  }
+
+  50% {
+    transform: translateY(-5px);
+    border-color: #fff;
+  }
+
+  100% {
+    transform: translateY(0);
+    border-color: var(--border-color);
   }
 }
