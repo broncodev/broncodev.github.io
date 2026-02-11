@@ -42,7 +42,7 @@ html::-webkit-scrollbar {
 nav ul {
   list-style-type: none;
   margin: 0;
-  padding: 10px 0;
+  padding: 10px 0px;
   position: fixed;
   width: 100%;
   z-index: 100;
@@ -98,14 +98,19 @@ img {
   object-fit: cover;
 }
 
+
 nav li {
+  padding: 0px 5px;
   margin: 0px 0px;
+  /* Removes inherited line-height spacing */
+  display: flex;
+  /* Ensures li tightly wraps content */
+  align-items: center;
 }
 
 li {
   list-style-type: none;
-  margin: 5px 5px;
-  padding: 0px 5px;
+  padding: 0px 0px;
 }
 
 li a {
@@ -378,6 +383,28 @@ summary:hover {
     inset 1px 1px 0 rgba(255, 255, 255, 0.3),
     inset 0 -1px 0 rgba(255, 255, 255, 0.05),
     inset 0 0 9px 3px rgba(255, 255, 255, 0.15);
+  display: inline-block;
+  /* Ensure it behaves like a block for padding */
+  transition: background-color 0.3s ease;
+}
+
+.glass-card:hover {
+  background-color: rgba(131, 131, 131, 0.3);
+}
+
+a.grid-item {
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  display: flex;
+  /* Ensure it keeps flex layout */
+  text-decoration: none;
+  /* Remove underline */
+  color: inherit;
+  /* Inherit color */
+}
+
+a.grid-item:hover {
+  transform: translateY(-5px);
+  border-color: #fff;
 }
 
 section.centered {
